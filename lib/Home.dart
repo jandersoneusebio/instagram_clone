@@ -6,6 +6,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  String _storiesAvatar = "https://cutecatsinhats-x7v0etsjgzjvirs3.netdna-ssl.com/wp-content/uploads/2019/10/komii-Pet-CostumeCreative-Toast-cat-Headdress-Soft-Bread-Slice-Collar-for-Cats-Toast-Bread-hat-Bread-Shaped-pet-hat-Easy-to-Remove-Cute-pet-Makeup-cat-Cosplay-Cap-cat-Toy-0-5-600x600.jpg";
+  String _postImages = "https://i.redd.it/gtku28e5r7631.jpg";
+  String _userAvatar = "https://sadanduseless.b-cdn.net/wp-content/uploads/2019/06/cat-breading7.jpg";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +56,7 @@ class _HomeState extends State<Home> {
                             padding: EdgeInsets.symmetric(horizontal: 5),
                             child: CircleAvatar(
                               backgroundImage: NetworkImage(
-                                "https://cutecatsinhats-x7v0etsjgzjvirs3.netdna-ssl.com/wp-content/uploads/2019/10/komii-Pet-CostumeCreative-Toast-cat-Headdress-Soft-Bread-Slice-Collar-for-Cats-Toast-Bread-hat-Bread-Shaped-pet-hat-Easy-to-Remove-Cute-pet-Makeup-cat-Cosplay-Cap-cat-Toy-0-5-600x600.jpg",
+                                _storiesAvatar,
                               ),
                               radius: 40,
                             ),
@@ -60,7 +65,7 @@ class _HomeState extends State<Home> {
                             padding: EdgeInsets.symmetric(horizontal: 5),
                             child: CircleAvatar(
                               backgroundImage: NetworkImage(
-                                "https://cutecatsinhats-x7v0etsjgzjvirs3.netdna-ssl.com/wp-content/uploads/2019/10/komii-Pet-CostumeCreative-Toast-cat-Headdress-Soft-Bread-Slice-Collar-for-Cats-Toast-Bread-hat-Bread-Shaped-pet-hat-Easy-to-Remove-Cute-pet-Makeup-cat-Cosplay-Cap-cat-Toy-0-5-600x600.jpg",
+                                _storiesAvatar
                               ),
                               radius: 40,
                             ),
@@ -69,7 +74,7 @@ class _HomeState extends State<Home> {
                             padding: EdgeInsets.symmetric(horizontal: 5),
                             child: CircleAvatar(
                               backgroundImage: NetworkImage(
-                                "https://cutecatsinhats-x7v0etsjgzjvirs3.netdna-ssl.com/wp-content/uploads/2019/10/komii-Pet-CostumeCreative-Toast-cat-Headdress-Soft-Bread-Slice-Collar-for-Cats-Toast-Bread-hat-Bread-Shaped-pet-hat-Easy-to-Remove-Cute-pet-Makeup-cat-Cosplay-Cap-cat-Toy-0-5-600x600.jpg",
+                                _storiesAvatar
                               ),
                               radius: 40,
                             ),
@@ -78,7 +83,7 @@ class _HomeState extends State<Home> {
                             padding: EdgeInsets.symmetric(horizontal: 5),
                             child: CircleAvatar(
                               backgroundImage: NetworkImage(
-                                "https://cutecatsinhats-x7v0etsjgzjvirs3.netdna-ssl.com/wp-content/uploads/2019/10/komii-Pet-CostumeCreative-Toast-cat-Headdress-Soft-Bread-Slice-Collar-for-Cats-Toast-Bread-hat-Bread-Shaped-pet-hat-Easy-to-Remove-Cute-pet-Makeup-cat-Cosplay-Cap-cat-Toy-0-5-600x600.jpg",
+                                _storiesAvatar
                               ),
                               radius: 40,
                             ),
@@ -87,7 +92,7 @@ class _HomeState extends State<Home> {
                             padding: EdgeInsets.symmetric(horizontal: 5),
                             child: CircleAvatar(
                               backgroundImage: NetworkImage(
-                                "https://cutecatsinhats-x7v0etsjgzjvirs3.netdna-ssl.com/wp-content/uploads/2019/10/komii-Pet-CostumeCreative-Toast-cat-Headdress-Soft-Bread-Slice-Collar-for-Cats-Toast-Bread-hat-Bread-Shaped-pet-hat-Easy-to-Remove-Cute-pet-Makeup-cat-Cosplay-Cap-cat-Toy-0-5-600x600.jpg",
+                                _storiesAvatar
                               ),
                               radius: 40,
                             ),
@@ -96,7 +101,7 @@ class _HomeState extends State<Home> {
                             padding: EdgeInsets.symmetric(horizontal: 5),
                             child: CircleAvatar(
                               backgroundImage: NetworkImage(
-                                "https://cutecatsinhats-x7v0etsjgzjvirs3.netdna-ssl.com/wp-content/uploads/2019/10/komii-Pet-CostumeCreative-Toast-cat-Headdress-Soft-Bread-Slice-Collar-for-Cats-Toast-Bread-hat-Bread-Shaped-pet-hat-Easy-to-Remove-Cute-pet-Makeup-cat-Cosplay-Cap-cat-Toy-0-5-600x600.jpg",
+                                _storiesAvatar
                               ),
                               radius: 40,
                             ),
@@ -119,7 +124,7 @@ class _HomeState extends State<Home> {
                               children: [
                                 CircleAvatar(
                                   backgroundImage: NetworkImage(
-                                    "https://cutecatsinhats-x7v0etsjgzjvirs3.netdna-ssl.com/wp-content/uploads/2019/10/komii-Pet-CostumeCreative-Toast-cat-Headdress-Soft-Bread-Slice-Collar-for-Cats-Toast-Bread-hat-Bread-Shaped-pet-hat-Easy-to-Remove-Cute-pet-Makeup-cat-Cosplay-Cap-cat-Toy-0-5-600x600.jpg",
+                                    _userAvatar
                                   ),
                                   radius: 20,
                                 ),
@@ -147,7 +152,7 @@ class _HomeState extends State<Home> {
                         child: Container(
                             color: Colors.black,
                             child: Image(
-                              image: NetworkImage("https://i.redd.it/gtku28e5r7631.jpg"),
+                              image: NetworkImage(_postImages),
                             )
                         )
                     ),
@@ -197,7 +202,7 @@ class _HomeState extends State<Home> {
                               children: [
                                 CircleAvatar(
                                   backgroundImage: NetworkImage(
-                                    "https://cutecatsinhats-x7v0etsjgzjvirs3.netdna-ssl.com/wp-content/uploads/2019/10/komii-Pet-CostumeCreative-Toast-cat-Headdress-Soft-Bread-Slice-Collar-for-Cats-Toast-Bread-hat-Bread-Shaped-pet-hat-Easy-to-Remove-Cute-pet-Makeup-cat-Cosplay-Cap-cat-Toy-0-5-600x600.jpg",
+                                    _userAvatar,
                                   ),
                                   radius: 20,
                                 ),
@@ -225,7 +230,7 @@ class _HomeState extends State<Home> {
                         child: Container(
                             color: Colors.black,
                             child: Image(
-                              image: NetworkImage("https://i.redd.it/gtku28e5r7631.jpg"),
+                              image: NetworkImage(_postImages),
                             )
                         )
                     ),
