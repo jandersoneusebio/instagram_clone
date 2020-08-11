@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class StoryComponent extends StatelessWidget {
 
-  String storiesAvatar;
-  String nome;
+  final String storiesAvatar;
+  final String nome;
 
   StoryComponent({this.storiesAvatar,this.nome});
 
@@ -17,7 +17,7 @@ class StoryComponent extends StatelessWidget {
             backgroundImage: NetworkImage(
               storiesAvatar,
             ),
-            radius: 40,
+            radius: 34,
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 5),

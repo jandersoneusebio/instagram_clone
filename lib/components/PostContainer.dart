@@ -16,6 +16,7 @@ class PostContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Container(
       padding: EdgeInsets.only(top: 10, bottom: 10),
       decoration: BoxDecoration(

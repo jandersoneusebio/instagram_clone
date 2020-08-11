@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/components/ChatTile.dart';
+import 'package:instagram_clone/components/direct/ChatTile.dart';
 
 class DirectScreen extends StatefulWidget {
   @override

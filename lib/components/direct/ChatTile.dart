@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/telas/ChatScreen.dart';
 
 class ChatTile extends StatefulWidget {
   @override
@@ -21,7 +22,12 @@ class _ChatTileState extends State<ChatTile> {
     return ListTile(
       contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
       onTap: (){
-
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ChatScreen(nome: widget.nome, avatar: widget.avatar)
+          )
+        );
       },
       title: Row(
         children: [
