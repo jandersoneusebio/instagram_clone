@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/telas/ProfileScreen.dart';
 
 class PostContainer extends StatelessWidget {
 
@@ -35,25 +36,35 @@ class PostContainer extends StatelessWidget {
               Container( // Cabeçalho do post
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 5),
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        backgroundImage: NetworkImage(
-                          postAvatar,
-                        ),
-                        radius: 20,
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 5),
-                        child: Text(
-                          postNome,
-                          style: TextStyle(
-                              fontSize: 16
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ProfileScreen(nome: postNome, avatar: postAvatar, userAvatar: userAvatar,)
+                        )
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(
+                            postAvatar,
                           ),
+                          radius: 20,
                         ),
-                      )
-                    ],
-                  ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 5),
+                          child: Text(
+                            postNome,
+                            style: TextStyle(
+                                fontSize: 16
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  )
                 ),
               ),
               Padding(
