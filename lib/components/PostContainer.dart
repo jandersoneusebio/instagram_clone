@@ -2,32 +2,50 @@ import 'package:flutter/material.dart';
 
 class PostContainer extends StatelessWidget {
 
-  String _postImages = "https://i.redd.it/gtku28e5r7631.jpg";
-  String _userAvatar = "https://sadanduseless.b-cdn.net/wp-content/uploads/2019/06/cat-breading7.jpg";
+  final String postNome;
+  final String postImage;
+  final String postAvatar;
+  final String userAvatar;
+  PostContainer({
+    this.postNome,
+    @required this.postAvatar,
+    @required this.postImage,
+    @required this.userAvatar
+  });
+
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 10, bottom: 10),
+      decoration: BoxDecoration(
+        border: Border( // Separador
+          bottom: BorderSide(
+            width: 0.3,
+            color: Colors.black
+          )
+        )
+      ),
       child: Column(
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              Container( // Cabeçalho do post
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 5),
                   child: Row(
                     children: [
                       CircleAvatar(
                         backgroundImage: NetworkImage(
-                          _userAvatar,
+                          postAvatar,
                         ),
                         radius: 20,
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 5),
                         child: Text(
-                          "nome_aleatorio",
+                          postNome,
                           style: TextStyle(
                               fontSize: 16
                           ),
@@ -43,16 +61,16 @@ class PostContainer extends StatelessWidget {
               )
             ],
           ),
-          Padding(
+          Padding( // Imagem do post
               padding: EdgeInsets.symmetric(vertical: 10),
               child: Container(
                   color: Colors.black,
                   child: Image(
-                    image: NetworkImage(_postImages),
-                  )
+                    image: NetworkImage(postImage),
+                  ),
               )
           ),
-          Padding(
+          Padding( // Ações
             padding: EdgeInsets.symmetric(horizontal: 10),
             child: Container(
               child: Row(
@@ -74,6 +92,20 @@ class PostContainer extends StatelessWidget {
               ),
             ),
           ),
+          Padding( // Sessão de Comentário
+            padding: EdgeInsets.symmetric(horizontal: 10),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: "Comentar...",
+                  icon: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      userAvatar
+                    ),
+                    radius: 16,
+                  )
+                ),
+              )
+          )
         ],
       ),
     );

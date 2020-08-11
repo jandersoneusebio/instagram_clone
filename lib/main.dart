@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/telas/DirectScreen.dart';
 import 'package:instagram_clone/telas/Home.dart';
 
 void main(){
@@ -8,6 +9,13 @@ void main(){
     theme: ThemeData(
       backgroundColor: Colors.white,
       scaffoldBackgroundColor: Colors.white,
+      primaryColor: Colors.white,
+      bottomAppBarColor: Colors.white
     ),
+    routes: {
+      "/direct" : (context) => DirectScreen()
+    },
+
+
   ));
 }

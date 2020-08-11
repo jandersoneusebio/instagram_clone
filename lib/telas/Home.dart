@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/components/PostContainer.dart';
 import 'package:instagram_clone/components/StoryComponent.dart';
+import 'package:instagram_clone/telas/DirectScreen.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -8,11 +9,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   List<String> _nomes = [
     "nala_cat",
     "grumpy_cat",
-    "bread_cat"
+    "bread_cat",
+    "cat_breading"
   ];
 
   var _avatares = [
@@ -21,6 +22,11 @@ class _HomeState extends State<Home> {
     "https://cdn.dicionariopopular.com/imagens/grumpy-cat-cke.jpg"
   ];
 
+  var _posts = [
+    "https://i.redd.it/gtku28e5r7631.jpg"
+  ];
+
+  String _userAvatar = "https://sadanduseless.b-cdn.net/wp-content/uploads/2019/06/cat-breading7.jpg";
 
   @override
   Widget build(BuildContext context) {
@@ -34,14 +40,22 @@ class _HomeState extends State<Home> {
               children: [
                 Icon(Icons.photo_camera, size: 30, color: Colors.black,),
                 Image.asset("assets/images/logo.png", width: 100),
-                Image.asset("assets/images/direct.png", width: 25)
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DirectScreen()
+                      )
+                    );
+                  },
+                  child: Image.asset("assets/images/direct.png", width: 25),
+                )
               ],
             )
           ],
         )
-
       ),
-
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -49,16 +63,16 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: EdgeInsets.only(top: 5, bottom: 5),
                 child: Container(
-                    padding: EdgeInsets.only(bottom: 3),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border(
-                            bottom: BorderSide(
-                                color: Colors.black,
-                                width: 0.3
-                            )
-                        )
-                    ),
+                  padding: EdgeInsets.only(bottom: 3),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    border: Border(
+                      bottom: BorderSide(
+                        color: Colors.black,
+                        width: 0.3
+                      )
+                    )
+                  ),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -74,13 +88,21 @@ class _HomeState extends State<Home> {
                     )
                 ),
               ),
-              PostContainer(),
-              PostContainer(),
+              PostContainer(
+                postNome: _nomes[0],
+                postAvatar: _avatares[0],
+                postImage: _posts[0],
+                userAvatar: _userAvatar,
+              ),
+              PostContainer(
+                postNome: _nomes[1],
+                postAvatar: _avatares[2],
+                postImage: _posts[0],
+                userAvatar: _userAvatar,
+              ),
             ],
           ),
         ),
-
-
       ),
 
       bottomNavigationBar: BottomAppBar(
@@ -101,3 +123,5 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+
