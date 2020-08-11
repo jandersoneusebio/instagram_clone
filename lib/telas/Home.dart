@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/components/BottomBar.dart';
 import 'package:instagram_clone/components/PostContainer.dart';
 import 'package:instagram_clone/components/StoryComponent.dart';
 import 'package:instagram_clone/telas/DirectScreen.dart';
@@ -27,7 +28,7 @@ class _HomeState extends State<Home> {
   ];
 
   String _userAvatar = "https://sadanduseless.b-cdn.net/wp-content/uploads/2019/06/cat-breading7.jpg";
-
+  int index = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,26 +101,19 @@ class _HomeState extends State<Home> {
                 postImage: _posts[0],
                 userAvatar: _userAvatar,
               ),
+              PostContainer(
+                postNome: _nomes[2],
+                postAvatar: _avatares[1],
+                postImage: _posts[0],
+                userAvatar: _userAvatar,
+              ),
+
             ],
           ),
         ),
       ),
 
-      bottomNavigationBar: BottomAppBar(
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Icon(Icons.home, color: Colors.black, size: 40),
-              Icon(Icons.search, color: Colors.black, size: 40),
-              Icon(Icons.add_box, color: Colors.black, size: 40),
-              Icon(Icons.favorite_border, color: Colors.black, size: 40),
-              Icon(Icons.account_circle, color: Colors.black, size: 40)
-            ],
-          ),
-        )
-      ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }
